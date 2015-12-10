@@ -60,7 +60,8 @@ body {
 /**
  * Tabs
  */
-.platform-ios {
+.platform-ios,
+.platform-android {
     .tabs {
         background-color: #3A603C;
         border-color: #3A603C;
@@ -160,22 +161,22 @@ body {
     }
 }
 
-.platform-android {
-    .tabs {
-        .tab-item {
-            color: #666;
+// .platform-android {
+//     .tabs {
+//         .tab-item {
+//             color: #666;
 
-            &.tab-item-active {
-                color: #5CB742 !important;
-                border-top: 3px solid #5CB742;
-            }
+//             &.tab-item-active {
+//                 color: #5CB742 !important;
+//                 border-top: 3px solid #5CB742;
+//             }
 
-            &.activated {
-                color: #5CB742 !important;
-            }
-        }
-    }
-}
+//             &.activated {
+//                 color: #5CB742 !important;
+//             }
+//         }
+//     }
+// }
 
 .sidebar {
     border-right: 1px solid #EFECE5;
