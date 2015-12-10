@@ -25,6 +25,7 @@
 <ion-content class="has-header" ng-show="tab == 2">
 <ion-list>
 <ion-item class="card" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+<a href="#/tab/tarefas/{{item}}">
 <p class="tarefa-status">
 	<span class="pull-left">Expira em: <b>05/05/2016</b></span>
 	<span class="pull-right">Prioridade: <b class="status">Alta</b></span>
@@ -35,6 +36,7 @@
 <p class="pull-right"><span>Nº: </span>244341</p>
 <p style="clear: both;"><span>Estado: </span> Designado</p>
 <ion-option-button>ADQUIRIR</ion-option-button>
+</a>
 </ion-item>
 </ion-list>
 </ion-content>
