@@ -9,9 +9,6 @@ function loginCtrl($scope, sessionService, messageService) {
     
     function login(){
         sessionService.login(vm.usuario, vm.senha, function(autenticado, msg){
-            if(autenticado) {
-                alert("autenticado!");
-            }
             if(msg) {
                 if(autenticado){
                     messageService.showMessage(msg);

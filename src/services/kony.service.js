@@ -45,8 +45,8 @@ function KonyService(constantService, $http, messageService) {
 		        	funSuccessCallback(response);
 		        }
 		   	} else {		   		
-			    $http.post(middlewareUrl, inputParameters, function(status, response){
-					if(status == 400){
+			    $http.post(middlewareUrl, inputParameters).then(function(status, response){
+					if(status == 400){//verificar se ainda precisa
 					    if(response.opstatus === 0){
 					        if(typeof funSuccessCallback === "function") {
 					        	funSuccessCallback(response);
@@ -59,7 +59,10 @@ function KonyService(constantService, $http, messageService) {
 					        }
 					    }
 					}
-			    });			    
+			    }).error(function(error){
+					//tratar
+					funErrorCallback(error);
+				});;			    
 		    }
 		}catch(ex){
 			messageService.showError(ex.message);
