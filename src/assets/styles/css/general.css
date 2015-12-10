@@ -1,0 +1,13 @@
+.img-circle {
+  display: block;
+  background: url("/assets/img/perfil_default.png") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left; }
+  .img-circle img {
+    width: 100%; }
+
+.highlighted {
+  background-color: yellow;
+  font-weight: bold; }

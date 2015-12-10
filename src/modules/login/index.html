@@ -1,0 +1,42 @@
+<ion-view class="login-wrapper" cache-view="false">
+	<ion-content class="row" hide-nav-bar="true" ng-init="init()">
+
+		<div class="list">
+			<img src="./assets/img/logo.png" alt="">
+			<div class="left text-left" ng-if="mensagensErro.length > 0">
+				<p class="message-error" ng-repeat="item in mensagensErro" ng-bind-html="item.msg"></p>
+			</div>
+
+			<label class="item item-input item-select text-left">
+				<div class="input-label">
+					Perfil
+				</div>
+				<select name="" id="" ng-model="config.perfil" ng-focus="!config.perfil" ng-change="init()">
+					<option value="">Escolha uma opção abaixo</option>
+					<option value="ASSIST">Assistente</option>
+					<option value="ADMIN">Administrador</option>
+					<option value="LDAP">LDAP</option>
+				</select>
+			</label>
+			<label class="item item-input item-select text-left" ng-if="(config.perfil == 'ASSIST')">
+				<div class="input-label">
+					Evento
+				</div>
+				<select ng-if="listAssembleias.length > 0" name="" id="" ng-model="config.evento" ng-options="assembleia as assembleia.titulo for assembleia in listAssembleias">
+				</select>
+				
+				<select ng-if="listAssembleias.length < 0" name="" id="" ng-model="config.evento">
+					<option value="0">Não possui eventos iniciados</option>
+				</select>
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="config.login" placeholder="Login">
+			</label>
+			<label class="item item-input">
+				<input type="password" ng-model="config.senha" placeholder="Senha">
+			</label>
+
+			<button class="button button-block button-balanced" ng-click="login(config)">Entrar</button>
+		</div>
+	</ion-content>
+</ion-view>

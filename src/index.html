@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Assembleias App</title>
+
+    
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <!-- endinject -->
+ 
+    <!-- files:css --> 
+    <link rel="stylesheet" href="assets/styles/css/general.css"> 
+    <link rel="stylesheet" href="assets/styles/css/ionic.app.css"> 
+    <link rel="stylesheet" href="assets/styles/css/assembleia/assembleia.css"> 
+    <link rel="stylesheet" href="assets/styles/css/login/login.css"> 
+    <link rel="stylesheet" href="assets/styles/css/participantes/participantes.css"> 
+    <link rel="stylesheet" href="assets/styles/css/sincronizacao/sincronizacao.css"> 
+    <!-- endinject -->
+
+    
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+
+    <!-- bower:js -->
+    <script src="lib/signature_pad/signature_pad.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+    <!-- endinject -->
+
+    <!-- files:js-->
+    <script src="modules/modules.module.js"></script>
+    <script src="modules/participantes/participantes.routes.js"></script>
+    <script src="modules/participantes/participantes.controller.js"></script>
+    <script src="modules/login/login.routes.js"></script>
+    <script src="modules/login/login.controller.js"></script>
+    <script src="modules/assembleia/assembleia.routes.js"></script>
+    <script src="modules/assembleia/assembleia.controller.js"></script>
+    <script src="directives/directives.module.js"></script>
+    <script src="directives/circle-image/circle-image.directive.js"></script>
+    <script src="services/services.module.js"></script>
+    <script src="services/session.service.js"></script>
+    <script src="services/participante.service.js"></script>
+    <script src="services/config.service.js"></script>
+    <script src="services/assembleia.service.js"></script>
+    <script src="app.js"></script>
+    <!-- endinject -->
+
+   
+  </head>
+  <body ng-app="assembleiasApp" ng-cloak>
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <!-- <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar> -->
+         
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

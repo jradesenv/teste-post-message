@@ -1,0 +1,24 @@
+.item-input, .button {
+  border-radius: 4px !important; }
+
+.login-wrapper {
+  background: #006F44; }
+  .login-wrapper .scroll {
+    margin: 0 auto; }
+  .login-wrapper .list {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10%; }
+    .login-wrapper .list img {
+      width: 60%; }
+    .login-wrapper .list .item {
+      margin-top: 5px;
+      padding: 14px; }
+    .login-wrapper .list button {
+      height: 65px; }
+  .login-wrapper .message-error {
+    border-radius: 4px;
+    background: #EF473A;
+    color: #FFF;
+    padding: 10px; }

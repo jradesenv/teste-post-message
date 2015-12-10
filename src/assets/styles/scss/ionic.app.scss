@@ -1,0 +1,218 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../../../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "src/lib/ionic/scss/ionic";
+@import "src/lib/font-awesome/scss/font-awesome";
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.padding-off {
+    padding: 0;
+}
+
+.pane {
+    background-color: #EFECE5;
+}
+
+.card {
+    height: calc(100% - 15px);
+    margin: 10px 10px !important;
+    
+}
+
+/**
+ * Header
+ */
+.bar {
+    &.bar-stable {
+        background-color: #006F44;
+        border-color: #006F44;
+
+        .title {
+            color: #C3DF2F;
+        }
+        .button {
+            &.button-energized {
+                font-weight: bold;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+/**
+ * Tabs
+ */
+.platform-ios {
+    .tabs {
+        background-color: #006F44;
+        border-color: #006F44;
+
+        .tab-item {
+            color: #025738;
+            border-top: 3px solid #006F44;
+            margin-top: -1px;
+
+            &.tab-item-active {
+                color: #FFF !important;
+                border-top: 3px solid #C3DF2F;
+            }
+
+            &.activated {
+                color: #FFF !important;
+            }
+        }
+    }
+}
+.tab-nav {
+    display: none;
+}
+.platform-android {
+    .tabs {
+        .tab-item {
+            color: #666;
+
+            &.tab-item-active {
+                color: #5CB742 !important;
+                border-top: 3px solid #5CB742;
+            }
+
+            &.activated {
+                color: #5CB742 !important;
+            }
+        }
+    }
+}
+
+.sidebar {
+    border-right: 1px solid #EFECE5;
+    height: 100%;
+    padding: 0;
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        color: #5CB742;
+        font-weight: bold;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .input-box {
+        border-bottom: 2px solid #eee;
+        border-top: 1px solid #eee;
+    }
+
+    .list {
+        padding: 0;
+        overflow: auto;
+
+        &.list-inset {
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+}
+h2 {
+    color: #333;
+}
+.verify-signature {
+    padding-top: 20%;
+
+    h2 {
+        color: #999;
+
+        span {
+            font-weight: bold;
+            color: #666;
+        }
+    }
+}
+.header-evento { 
+    height: 150px;
+    transition: all .1s linear;
+    > * {
+        opacity: 1;
+        transition: all .3s linear;
+    }
+}
+.box-hide {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all .3s linear;
+    > * {
+        opacity: 0;
+        transition: all .1s linear;
+    }
+}
+
+/*
+ MODAL
+ */
+@media (min-width: 680px) {
+    .modal-assinatura {
+        top: 0px !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+
+        .bar {
+            &.bar-stable {
+                background-color: #006F44;
+                border-color: #006F44;
+
+                .title {
+                    color: #C3DF2F;
+                }
+                .button {
+                    &.button-energized {
+                        font-weight: bold;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .platform-ios.platform-cordova .modal-wrapper .modal-assinatura .bar-header:not(.bar-subheader) > * {
+        margin-top: 20px;
+    }
+
+    .platform-ios.platform-cordova .modal-wrapper .modal-assinatura .bar-header:not(.bar-subheader) {
+        height: 64px;
+    }
+
+    .platform-ios.platform-cordova .modal-wrapper .modal-assinatura .has-header,
+    .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
+        top: 64px;
+    }
+}

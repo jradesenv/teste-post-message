@@ -1,0 +1,8 @@
+
+[
+	"com.ionic.keyboard",
+    "org.apache.cordova.device",
+	"https://github.com/litehelpers/Cordova-sqlite-storage.git"
+]
+
+

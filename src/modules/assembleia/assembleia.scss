@@ -1,0 +1,73 @@
+.seta-up {
+	height: 45%;
+	position: absolute;
+	top: 10px;
+	width: 20%;
+	-ms-transform: rotate(-50deg); /* IE 9 */
+    -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
+    transform: rotate(-50deg);
+    left: 65px;
+	img {
+		width: auto;
+		height: 100%;
+	}
+}
+.modal-sincronizacao {
+	width: 40%;
+	left: 30%;
+	right: 30%;
+	.bar-header {
+		background-color: #006F44;
+		.title {
+			color: #FFF;
+		}
+		.button {
+			border-color: transparent !important;
+			color: #333;
+			font-weight: bold;
+		}
+	}
+	.item {
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+}
+.evento {
+	margin-bottom: 10px;
+	&.novo {
+		background-color: #F8F8F8;
+		color: #333;
+	}
+	&.andamento {
+		background-color: #FDEEB6;
+		color: #B17C2E;
+	}
+	&.encerrado {
+		background-color: #DFF1C1; 
+		color: #51891E; 
+	}
+	&.submetido {
+		background-color: #FEBABB; 
+		color: #D71423; 
+	}
+	.button {
+		float: right !important;
+		font-size: 12px;
+		line-height: 35px;
+		min-height: 0;
+		color: #fff;
+		border: none;
+		margin-left: 4px;
+		margin-top: 15px;
+		font-weight: bold;
+		&::before {
+			line-height: 35px;
+		}
+	}
+}
+.no-padding {
+	padding: 0;
+}
+.raia-desabilitada {
+	opacity: 0.5;
+}

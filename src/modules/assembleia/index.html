@@ -1,0 +1,59 @@
+<ion-view cache-view="false">
+  <ion-header-bar class="bar-stable">
+    <button class="button button-balanced icon-left icon-left ion-ios-plus-outline" ng-if="usuario.perfil == 'LDAP'" ng-click="openModal('','sincronizacao')">
+    Novo evento</button>
+    <h1 class="title">Assembléia</h1>
+    <div class="buttons">
+      <button class="button button-balanced icon-right icon-left ion-log-out" ng-if="usuario.perfil != 'ASSIST'" ng-click="logout()"> Logout </button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content scroll="false" class="row has-header has-tabs" ng-if="!temAlgumaAssembleiaAtiva">
+
+    <div class="card row" ng-if="true">
+      <div class="col" style="text-align:center; position: relative">
+        <h2 style="margin-top: 20%; color: #333;">Não há evento sincronizado.</h2>
+        <div class="seta-up">
+          <img src="assets/img/seta.png" height="499" width="96" alt="">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+
+  <ion-content scroll="false" class="row has-header" ng-if="temAlgumaAssembleiaAtiva">
+
+    <div direction="y" class="card col no-padding" ng-repeat="(indexRaia, raia) in raias">
+      <div class="row">
+        <div class="col">
+          <p ng-if="raia.id_raia == 0"><i class="ion-loop"></i> <b>{{raia.status}}</b></p>
+          <p ng-if="raia.id_raia == 1"><i class="ion-arrow-right-c"></i> <b>{{raia.status}}</b></p>
+          <p ng-if="raia.id_raia == 2"><i class="ion-checkmark-circled"></i> <b>{{raia.status}}</b></p>
+        </div>
+      </div>
+      <ion-scroll direction="y" style="height: calc(100% - 50px);">
+        <div class="row evento" ng-class="raia.id_raia == 0 ? 'novo' : (raia.id_raia == 1 ? 'andamento' : 'encerrado')" ng-repeat="(indexAssembleia, assembleia) in raia.assembleias">
+          <div class="col">
+            <h4>{{assembleia.titulo}}</h4>
+            <ul>
+              <li><b>Código do envento:</b> {{assembleia.id}}</li>
+              <li><b>Local:</b> {{assembleia.local}}</li>
+              <li><b>Número de participantes:</b> {{assembleia.listParticipantes.length}}</li>
+              <li><b>Data:</b> {{assembleia.data}}</li>
+            </ul>
+            <button class="button button-positive icon-right ion-arrow-right-b" ng-click="showPopup('start', indexRaia, indexAssembleia)"
+            ng-if="raia.id_raia ==0 && usuario.perfil == 'ADMIN'">Iniciar evento</button>
+
+            <a ui-sref="lista-participantes({id_assembleia: assembleia.id})" class="button button-energized icon-right ion-ios-eye" ng-if="raia.id_raia ==1">Visualizar envento</a>
+            <button class="button button-assertive icon-right ion-stop" ng-click="showPopup('stop', indexRaia, indexAssembleia)" ng-if="usuario.perfil == 'ADMIN' && raia.id_raia ==1">Encerrar evento</button>
+
+            <button class="button button-balanced icon-right ion-upload" ng-click="submeterAssembleia(indexRaia,indexAssembleia)" ng-if="usuario.perfil == 'LDAP' && raia.id_raia ==2">Submeter dados do evento</button>
+            <div class=" balanced icon-right ion-checkmark-circled" ng-if="usuario.perfil == 'ADMIN' && raia.id_raia ==2" style="font-weight: bold; float: right; line-height: 52px"> Evento encerrado. </div>
+          </div>
+
+        </div>
+      </ion-scroll>
+    </div>
+
+  </ion-content>
+</ion-view>
