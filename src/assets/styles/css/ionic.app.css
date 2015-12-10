@@ -11223,7 +11223,11 @@ body {
     text-decoration: none; }
   .card .item-content, .card.item {
     border-radius: 4px;
-    padding: 5px; }
+    padding: 0; }
+    .card .item-content a, .card.item a {
+      padding: 5px;
+      display: table;
+      float: left; }
     .card .item-content .col, .card.item .col {
       padding: 0;
       margin: 0; }

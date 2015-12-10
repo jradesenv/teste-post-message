@@ -98,7 +98,12 @@ body {
     .item-content,
     &.item {
         border-radius: 4px;
-        padding: 5px;
+        padding: 0;
+        a {
+            padding: 5px;
+            display: table;
+            float: left;
+        }
         .col {
             padding: 0;
             margin: 0;
