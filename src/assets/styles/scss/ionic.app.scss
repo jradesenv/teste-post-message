@@ -92,9 +92,41 @@ body {
     padding: 0;
     overflow: inherit;
     border-radius: 4px;
-    .item-content {
+    a {
+        text-decoration: none;
+    }
+    .item-content,
+    &.item {
         border-radius: 4px;
         padding: 5px;
+        .col {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            padding: 0;
+            .col {
+                font-size: 13px;
+                color: #838383;
+                padding: 0;
+                b {
+                   color: #838383; 
+                }
+                span {
+                    color: #B3B3B3;
+                }
+                .status {
+                    color: #B14C4D !important;
+                }
+                &.colcol-22 {
+                    width: 22%;
+                }
+                &:first-child {
+                    text-align: right;    
+                }
+            }
+        }
+        .box,
         p {
             font-size: 13px;
             color: #838383;
@@ -111,7 +143,7 @@ body {
         h2 {
             font-weight: bold;
             white-space: normal;
-            font-size: 15px;
+            font-size: 14px;
         }
     }
     .button {

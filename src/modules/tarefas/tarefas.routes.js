@@ -11,12 +11,12 @@ angular.module('sc.modules')
                 }
             }
         })
-        .state('tab.tarefas-detalhes', {
+        .state('tab.tarefas-detalhe', {
             url: '/tarefas/:id',
                 views: {
                 'tab-tarefas': {
                     templateUrl: 'modules/tarefas/tarefas-detalhe.html',
-                    controller: 'AgendaChatController'
+                    controller: 'tarefasDetalheCtrl'
                 }
             }
         });

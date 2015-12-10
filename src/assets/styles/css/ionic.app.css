@@ -11219,22 +11219,51 @@ body {
   padding: 0;
   overflow: inherit;
   border-radius: 4px; }
-  .card .item-content {
+  .card a {
+    text-decoration: none; }
+  .card .item-content, .card.item {
     border-radius: 4px;
     padding: 5px; }
-    .card .item-content p {
+    .card .item-content .col, .card.item .col {
+      padding: 0;
+      margin: 0; }
+    .card .item-content .box, .card.item .box {
+      padding: 0; }
+      .card .item-content .box .col, .card.item .box .col {
+        font-size: 13px;
+        color: #838383;
+        padding: 0; }
+        .card .item-content .box .col b, .card.item .box .col b {
+          color: #838383; }
+        .card .item-content .box .col span, .card.item .box .col span {
+          color: #B3B3B3; }
+        .card .item-content .box .col .status, .card.item .box .col .status {
+          color: #B14C4D !important; }
+        .card .item-content .box .col.colcol-22, .card.item .box .col.colcol-22 {
+          width: 22%; }
+        .card .item-content .box .col:first-child, .card.item .box .col:first-child {
+          text-align: right; }
+    .card .item-content .box,
+    .card .item-content p, .card.item .box,
+    .card.item p {
       font-size: 13px;
       color: #838383; }
-      .card .item-content p b {
+      .card .item-content .box b,
+      .card .item-content p b, .card.item .box b,
+      .card.item p b {
         color: #838383; }
-      .card .item-content p span {
+      .card .item-content .box span,
+      .card .item-content p span, .card.item .box span,
+      .card.item p span {
         color: #B3B3B3; }
-      .card .item-content p .status {
+      .card .item-content .box .status,
+      .card .item-content p .status, .card.item .box .status,
+      .card.item p .status {
         color: #B14C4D !important; }
-    .card .item-content h2 {
+    .card .item-content h2, .card.item h2 {
       font-weight: bold;
       white-space: normal;
-      font-size: 15px; }
+      font-size: 14px; }
   .card .button {
     background-color: #2B653C;
     color: #FFF;

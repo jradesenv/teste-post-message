@@ -3,5 +3,4 @@ angular.module('sc.modules')
 
 function tarefasCtrl($scope) {
     var vm = $scope;
-    
 };
