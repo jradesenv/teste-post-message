@@ -22,5 +22,5 @@ angular.module('tarefasApp', ['ionic', 'sc.modules', 'sc.services'])
                 abstract: true,
                 templateUrl: 'modules/menu/tabs.html'
             });
-        $urlRouterProvider.otherwise('/tab/tarefas');
+        $urlRouterProvider.otherwise('login');
     });

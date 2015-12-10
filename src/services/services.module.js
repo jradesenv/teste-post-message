@@ -1,2 +1,2 @@
-angular.module('sc.services', [])
+angular.module('sc.services', ['ngStorage'])
 
