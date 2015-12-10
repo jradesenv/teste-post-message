@@ -1,0 +1,48 @@
+<ion-view ng-init="tab = 1">
+<ion-header-bar class="bar-stable">
+<h1 class="title">Tarefas</h1>
+</ion-header-bar>
+
+<ion-content class="has-header" ng-show="tab == 1">
+<ion-list>
+<ion-item class="card" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+<p class="tarefa-status">
+	<span class="pull-left">Expira em: <b>05/05/2016</b></span>
+	<span class="pull-right">Prioridade: <b class="status">Alta</b></span>
+</p>
+<h2>Tab-1 Revisar CO001423-2015 - Lançamento da nova ferramenta de comunicados(0938)</h2>
+<p><span>Favorecidos: </span> christian_balz, alessandra_fontou... <b>+12</b></p>
+<p class="pull-left"><span>Criado em: </span>30/04/2015</p>
+<p class="pull-right"><span>Nº: </span>244341</p>
+<p style="clear: both;"><span>Estado: </span> Designado</p>
+<ion-option-button>ADQUIRIR</ion-option-button>
+</ion-item>
+</ion-list>
+</ion-content>
+
+<ion-content class="has-header" ng-show="tab == 2">
+<ion-list>
+<ion-item class="card" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+<p class="tarefa-status">
+	<span class="pull-left">Expira em: <b>05/05/2016</b></span>
+	<span class="pull-right">Prioridade: <b class="status">Alta</b></span>
+</p>
+<h2>Tab-2 Revisar CO001423-2015 - Lançamento da nova ferramenta de comunicados(0938)</h2>
+<p><span>Favorecidos: </span> christian_balz, alessandra_fontou... <b>+12</b></p>
+<p class="pull-left"><span>Criado em: </span>30/04/2015</p>
+<p class="pull-right"><span>Nº: </span>244341</p>
+<p style="clear: both;"><span>Estado: </span> Designado</p>
+<ion-option-button>ADQUIRIR</ion-option-button>
+</ion-item>
+</ion-list>
+</ion-content>
+
+<ion-footer-bar class="tabs tabs-icon-only">
+<a class="tab-item" ng-click="tab=1" ng-class="{'tab-item-active' : tab==1}">
+	<i class="icon ion-ios-people"></i>
+</a>
+<a class="tab-item" ng-click="tab=2" ng-class="{'tab-item-active' : tab==2}">
+	<i class="icon ion-ios-person"></i>
+</a>
+</ion-footer-bar>
+</ion-view>

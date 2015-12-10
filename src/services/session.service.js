@@ -2,7 +2,7 @@ angular.module('sc.services')
 
 	.factory('sessionService', SessionService);
 
-function SessionService(constantService, $sessionStorage, konyService, messageService, menuService) {
+function SessionService(constantService, $localStorage, konyService, messageService, menuService) {
 	return {
 		login: login,
 		setSession: setSession,
@@ -94,7 +94,7 @@ function SessionService(constantService, $sessionStorage, konyService, messageSe
 					menuService.addItem(itemMenu[i].nome, "WebviewController", itemMenu[i].caminho); //trocar controller por Rota	
 				}
 				
-				menuService.addItem("Tarefas", "TarefasController"); //trocar controller por Rota				 
+				menuService.addItem("Tarefas", "tab.tarefas");			 
 				menuService.selectFirstItem();
 			} else {
 				messageService.showError("Não foi possível buscar o menu mobile!");
@@ -107,7 +107,7 @@ function SessionService(constantService, $sessionStorage, konyService, messageSe
 	function logout(){
 		try{
 			konyService.callKonyService("Logout", {}, function(result){
-				delete $sessionStorage.session;
+				delete $localStorage.session;
 				window.close(); //exit app
 			});
 		}catch(ex){
@@ -117,13 +117,13 @@ function SessionService(constantService, $sessionStorage, konyService, messageSe
 	
 	function setSession(usuario, callback) {
 		delete usuario.senha;
-		$sessionStorage.session = JSON.stringify(usuario);
+		$localStorage.session = JSON.stringify(usuario);
 		if (callback)
 			callback();
 	}
 
 	function getSession() {
-		var retorno = JSON.parse($sessionStorage.session);
+		var retorno = JSON.parse($localStorage.session);
 		console.log("getSession: ", retorno);
 		return retorno;
 	}

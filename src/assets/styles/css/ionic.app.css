@@ -11168,28 +11168,24 @@ a.button {
 .fa-percent:before {
   content: ""; }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  margin: 0px; }
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .padding-off {
   padding: 0; }
 
+.tab-nav {
+  display: none; }
+
 .pane {
   background-color: #EFECE5; }
-
-.card {
-  height: calc(100% - 15px);
-  margin: 10px 10px !important; }
 
 /**
  * Header
  */
 .bar.bar-stable {
-  background-color: #006F44;
-  border-color: #006F44; }
+  background-color: #3A603C;
+  border-color: #3A603C; }
   .bar.bar-stable .title {
     color: #C3DF2F; }
   .bar.bar-stable .button.button-energized {
@@ -11200,10 +11196,10 @@ html, body {
  * Tabs
  */
 .platform-ios .tabs {
-  background-color: #006F44;
-  border-color: #006F44; }
+  background-color: #3A603C;
+  border-color: #3A603C; }
   .platform-ios .tabs .tab-item {
-    color: #025738;
+    color: #214D32;
     border-top: 3px solid #006F44;
     margin-top: -1px; }
     .platform-ios .tabs .tab-item.tab-item-active {
@@ -11212,8 +11208,39 @@ html, body {
     .platform-ios .tabs .tab-item.activated {
       color: #FFF !important; }
 
-.tab-nav {
-  display: none; }
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.card {
+  margin: 8px 5px;
+  padding: 0;
+  overflow: inherit;
+  border-radius: 4px; }
+  .card .item-content {
+    border-radius: 4px;
+    padding: 5px; }
+    .card .item-content p {
+      font-size: 13px;
+      color: #838383; }
+      .card .item-content p b {
+        color: #838383; }
+      .card .item-content p span {
+        color: #B3B3B3; }
+      .card .item-content p .status {
+        color: #B14C4D !important; }
+    .card .item-content h2 {
+      font-weight: bold;
+      white-space: normal;
+      font-size: 15px; }
+  .card .button {
+    background-color: #2B653C;
+    color: #FFF;
+    border-radius: 4px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important; }
 
 .platform-android .tabs .tab-item {
   color: #666; }
