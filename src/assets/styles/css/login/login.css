@@ -3,15 +3,9 @@
 
 .login-wrapper {
   background: #006F44; }
-  .login-wrapper .scroll {
-    margin: 0 auto; }
   .login-wrapper .list {
     text-align: center;
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 10%; }
-    .login-wrapper .list img {
-      width: 60%; }
+    margin-top: 50%; }
     .login-wrapper .list .item {
       margin-top: 5px;
       padding: 14px; }
